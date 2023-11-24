@@ -100,6 +100,7 @@
     <script>
       const mainElement = document.getElementById("main-front");
       const mainSuccessElement = document.getElementById("main-success");
+      const inputElemet=document.getElementById("email")
       mainSuccessElement.style.display = "none";
 
       document
@@ -109,9 +110,17 @@
           event.preventDefault();
           mainElement.style.display = "none";
           mainSuccessElement.style.display = "flex";
+          inputElemet.value=''
 
           // Show the success message and hide the main form
         });
+
+      const dismissButton =
+        document.getElementsByClassName("gradient-button")[0];
+      dismissButton.addEventListener("click", () => {
+        mainElement.style.display = "flex";
+        mainSuccessElement.style.display = "none";
+      });
     </script>
   </body>
 </html>
