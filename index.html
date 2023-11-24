@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="front" id="main-front">
+      <div class="container">
+        <!-- Sign-up form start -->
+        <h1>Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>
+            <img src="./assets/images/icon-list.svg" />
+            Product discovery and building what matters
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" />
+            Measuring to ensure updates are a success
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" />
+            And much more!
+          </li>
+        </ul>
+        <form id="myForm">
+          <label for="email"> Email address </label>
+          <input
+            placeholder="email@company.com"
+            name="email"
+            id="email"
+            required
+            type="email"
+          />
+
+          <button type="submit">Subscribe to monthly newsletter</button>
+        </form>
+
+        <!-- Sign-up form end -->
+
+        <!-- Success message start -->
+
+        <!-- Success message end -->
+
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="#">Om Bharti</a>.
+        </div>
+      </div>
+      <aside>
+        <img src="./assets/images/illustration-sign-up-desktop.svg" />
+      </aside>
+    </main>
+    <main id="main-success" class="success">
+      <div class="success-message">
+        <img
+          src="./assets/images/icon-success.svg"
+          height="50px"
+          width="50px"
+        />
+        <h2>Thanks for subscribing!</h2>
+
+        <p>
+          A confirmation email has been sent to ash@loremcompany.com. Please
+          open it and click the button inside to confirm your subscription.
+        </p>
+
+        <button class="gradient-button" onclick="onButtonClick">
+          Dismiss message
+        </button>
+      </div>
+    </main>
+    <script>
+      const mainElement = document.getElementById("main-front");
+      console.log("🚀 ~ file: index.html:96 ~ mainElement:", mainElement);
+      const mainSuccessElement = document.getElementById("main-success");
+
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          // Prevent the default form submission behavior
+          event.preventDefault();
+          mainElement.style.display = "none";
+          mainSuccessElement.style.display = "block";
+
+          // Show the success message and hide the main form
+        });
+    </script>
+  </body>
+</html>
