@@ -99,8 +99,8 @@
     </main>
     <script>
       const mainElement = document.getElementById("main-front");
-      console.log("🚀 ~ file: index.html:96 ~ mainElement:", mainElement);
       const mainSuccessElement = document.getElementById("main-success");
+      mainSuccessElement.style.display = "none";
 
       document
         .getElementById("myForm")
@@ -108,7 +108,7 @@
           // Prevent the default form submission behavior
           event.preventDefault();
           mainElement.style.display = "none";
-          mainSuccessElement.style.display = "block";
+          mainSuccessElement.style.display = "flex";
 
           // Show the success message and hide the main form
         });
